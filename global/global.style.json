@@ -1,0 +1,15 @@
+{
+    "fonts_thick": "'Noto Sans', sans-serif;",
+    "fonts_prime": "'Playfair Display', serif;",
+    "fonts_second": "'Source Sans Pro', sans-serif;",
+    "font_weights": ["300", "700", "900"],
+    "hexcolors": {
+        "dark": "#1a1a1a",
+        "ice": "#f1fffb",
+        "mint": "#72ffd4",
+        "lemon": "#e3ff71",
+        "rasberry": "#ff719c",
+        "grape": "#8d71ff",
+        "showroom": "#F2F2F2"
+    }
+}
