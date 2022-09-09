@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import * as component from '../components/components.libary'
+import React from 'react'
+import * as CL from '../components/components.libary'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <React.Fragment>
       <Head>
         <title>jumpcode.org</title>
         <meta name="description" content="A website agency that focuses on
@@ -12,10 +13,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      
-    <component.Navbar />
 
-    </div>
+      <CL.Home />
+
+    </React.Fragment>
   )
 }
 

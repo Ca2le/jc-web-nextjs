@@ -1,13 +1,19 @@
+/* //
+*--------------------------------------------------------------------- 
+*                    I use CL as standard alias 🦆                                                
+*       import * as CL from '../components/components.libary'             
+*--------------------------------------------------------------------- 
+*/
 
-// Global Components 🌐 only used once but straight forward anyhow 👍
+// Global Components 🌐
 
-import  FooterComponent from "./footer/footer.component";
+import FooterComponent from "./footer/footer.component";
 import NavbarComponent from "./navbar/navbar.component";
 
 export const Footer = FooterComponent
 export const Navbar = NavbarComponent
 
-// Homepage Components 🏠 // only used once but straight forward anyhow 👍
+// Homepage Components 🏠
 
 import HomeComponent from './home/home.component'
 
