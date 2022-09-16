@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import React from 'react'
+import React, { useContext } from 'react'
 import * as CL from '../components/components.libary'
 
+
 const Home: NextPage = () => {
+
+
   return (
     <React.Fragment>
       <Head>
@@ -13,7 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-
+      
       <CL.Home />
 
     </React.Fragment>

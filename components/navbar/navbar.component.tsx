@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { FC, ReactElement } from 'react'
+import * as CL from '../components.libary'
+import { Nav_Div } from './navbar.styled'
 
-function Navbar() {
+
+
+function Navbar(): ReactElement {
   return (
-    <div>Navbar</div>
+    <Nav_Div>
+      <CL.Logo />
+      <CL.Link />
+      <CL.Hamburger />
+    </Nav_Div>
   )
 }
 

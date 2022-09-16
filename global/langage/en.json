@@ -1,5 +1,5 @@
 {
-    "nav_services": "Tjänster",
+    "nav_services": "Some Stuff We Do",
     "nav_showroom": "Showroom",
     "nav_contact": "Kontakt",
     "home_h_1": "Vi är en liten techbyrå som skapar ",
@@ -45,7 +45,7 @@
     "showroom_link_text": "Läs mer om våra projekt",
     "foot_h": "Skriv till oss!",
     "copy_mail": "carl@jumpcode.org",
-    "fa-link": "www.facebook.com",
-    "li-link": "www.linkedin.com",
+    "fa_link": "www.facebook.com",
+    "li_link": "www.linkedin.com",
     "foot_copyright": "Copyright © 2022 JUMPCODE.ORG  All rights reserved. A Good Day IT AB Organization number: 559335-7055"
 }
