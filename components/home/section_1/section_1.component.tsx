@@ -1,8 +1,11 @@
 import React from 'react'
+import { Div } from './section_1.styled'
 
 function Section_1() {
   return (
-    <div>Section_1</div>
+    <Div>
+      <h1>Its time to get FUUUUUUUUNKYYHEEY</h1>
+    </Div>
   )
 }
 
