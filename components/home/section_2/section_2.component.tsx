@@ -1,8 +1,9 @@
 import React from 'react'
+import { Div } from './section_2.styled'
 
 function Section_2() {
   return (
-    <div>Section_2</div>
+    <Div>Section_2</Div>
   )
 }
 

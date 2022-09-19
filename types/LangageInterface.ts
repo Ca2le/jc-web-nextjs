@@ -1,6 +1,7 @@
     export interface ILangage {
         nav_services: string;
         nav_showroom: string;
+        nav_developers: string
         nav_contact: string;
         home_h_1: string;
         home_h_2: readonly string[];

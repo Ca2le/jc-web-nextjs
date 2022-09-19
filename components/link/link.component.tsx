@@ -1,8 +1,17 @@
 import React from 'react'
+import NextLink from 'next/link'
 
-function Link() {
+interface LinkProps {
+  value: string
+  route: string
+}
+function Link(props: LinkProps) {
   return (
-    <div>Link</div>
+    <React.Fragment>
+      <NextLink href={props.route} passHref>
+        <a>{props.value}</a>
+      </NextLink>
+    </React.Fragment>
   )
 }
 

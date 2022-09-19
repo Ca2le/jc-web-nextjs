@@ -3,7 +3,7 @@ interface ITheme {
     readonly fonts_thick: string
     readonly fonts_prime: string
     readonly fonts_second: string;
-    readonly font_weights: { thin: string, thick: string, black: string };
+    readonly font_weights: { thin: string, extra_light: string, light: string, redular: string, medium: string, semibold: string, bold: string, extra_bold: string, black: string };
     readonly hexcolors: {
         readonly dark: string;
         readonly ice: string;
@@ -19,7 +19,7 @@ const theme = {
     fonts_thick: '\'Noto Sans\', sans-serif;',
     fonts_prime: '\'Playfair Display\', serif;',
     fonts_second: '\'Source Sans Pro\', sans-serif;',
-    font_weights: { thin: '300', thick: '700', black: '900' },
+    font_weights: { thin: '100', extra_light: '200', light: '300', redular: '400', medium: '500', semibold: '600', bold: '700', extra_bold: '800', black: '900' },
     hexcolors: {
         dark: '#1a1a1a',
         ice: '#f1fffb',

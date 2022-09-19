@@ -5,6 +5,7 @@
 *--------------------------------------------------------------------- 
 */
 
+
 // Template Components 🧱
 
 import FooterComponent from "./footer/footer.component";
@@ -15,8 +16,10 @@ export const Navbar = NavbarComponent
 
 // Navbar Components 
 import HamburgerComponent from "./navbar/hamburger/hamburger.component";
+import NavLinksComponent from "./navbar/nav_links/nav_links.component";
 
 export const Hamburger = HamburgerComponent
+export const NavLinks = NavLinksComponent
 
 
 // Homepage Components 🏠
@@ -40,6 +43,8 @@ import LinkComponent from "./link/link.component";
 import LogoComponent from "./logo/logo.component";
 
 
+
+
 export const Button = ButtonComponent
 export const Link = LinkComponent
 export const Logo= LogoComponent
@@ -47,3 +52,4 @@ export const Logo= LogoComponent
 
 
 
+NavLinks
