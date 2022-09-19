@@ -8,7 +8,6 @@ export const Nav_Div = styled.div`
     width: 100%;
     min-width: 200px;
     height: 10vh;
-    background-color: yellow;
 
     
 `
@@ -18,7 +17,7 @@ export const Nav_Wrapper = styled.div`
     height: 100%;
     margin: auto;
     display: flex;
-    background-color: blue;
+    background-color: transparent;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;

@@ -1,7 +1,8 @@
 {
     "nav_services": "Tjänster",
     "nav_showroom": "Showroom",
-    "nav_contact": "Kontakt",
+    "nav_contact": "Kontakt",   
+    "nav_developers": "Utvecklare",
     "home_h_1": "Vi är en liten techbyrå som skapar ",
     "home_h_2": ["levande", "roliga", "galna", "vackra"],
     "home_h_3": "appar åt er.",

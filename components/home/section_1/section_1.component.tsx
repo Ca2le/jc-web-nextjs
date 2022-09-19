@@ -4,7 +4,7 @@ import { Div } from './section_1.styled'
 function Section_1() {
   return (
     <Div>
-      <h1>Its time to get FUUUUUUUUNKYYHEEY</h1>
+      <h1>section 1</h1>
     </Div>
   )
 }
