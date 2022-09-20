@@ -1,18 +1,24 @@
-import React from 'react'
-import NextLink from 'next/link'
+import React, { useContext } from 'react'
+import Link from 'next/link'
+import { A } from './link.styled'
+import * as CL from '../components.libary'
 
 interface LinkProps {
-  value: string
-  route: string
+  value: string;
+  route: string;
 }
-function Link(props: LinkProps) {
+
+function LinkComponent(props: LinkProps) {
+
+  const {state} = useContext(CL.HamburgerToggleContext)
+  
   return (
     <React.Fragment>
-      <NextLink href={props.route} passHref>
-        <a>{props.value}</a>
-      </NextLink>
+      <Link href={props.route} passHref >
+        <A toggle={state}>{props.value}</A>
+      </Link>
     </React.Fragment>
   )
 }
 
-export default Link
+export default LinkComponent
