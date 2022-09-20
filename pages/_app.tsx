@@ -1,9 +1,8 @@
 import type { AppProps } from 'next/app'
 import React from 'react'
 import * as CL from '../components/components.libary'
-/* Langage state theme of the page ⛳ */
+import HamburgerToggleComponent from '../components/context/hamburger_toggle_context'
 import LangageContextComponent from '../components/context/langage_context.component'
-/* Screeb width/height state of window object 🦕 */
 import ScreenSizeContextComponent from '../components/context/screen_size_context.component'
 import { globalStyle as GlobalStyle } from '../global/styles/styles'
 
@@ -13,9 +12,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <ScreenSizeContextComponent>
         <LangageContextComponent>
-          <CL.Navbar />
-          <Component {...pageProps} />
-          <CL.Footer />
+          <HamburgerToggleComponent>
+            <CL.Navbar />
+            <Component {...pageProps} />
+            <CL.Footer />
+          </HamburgerToggleComponent>
         </LangageContextComponent>
       </ScreenSizeContextComponent>
     </React.Fragment>
