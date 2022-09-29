@@ -4,13 +4,13 @@ import theme from "../../../global/styles/theme";
 
 export const Hamburger = styled.div`
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 3rem;
+    width: 3rem;
 `
 export const Cheeze = styled.div`
     position: absolute;
     background-color: ${theme.hexcolors.dark};
-    height: 3px;
+    height: 0.1rem;
     width: 2rem;
     top: 50%;
     left: 50%;

@@ -1,7 +1,13 @@
 // and extend them!
 interface ITheme {
-    readonly fonts_thick: string
-    readonly fonts_prime: string
+    screen: {
+        phone: string;
+        tablet: string;
+        laptop: string;
+        desktop: string;
+    }
+    readonly fonts_thick: string;
+    readonly fonts_prime: string;
     readonly fonts_second: string;
     readonly font_weights: { thin: string, extra_light: string, light: string, redular: string, medium: string, semibold: string, bold: string, extra_bold: string, black: string };
     readonly hexcolors: {
@@ -12,10 +18,17 @@ interface ITheme {
         readonly rasberry: string;
         readonly grape: string;
         readonly showroom: string;
+        readonly tiger: string;
     }
 }
 
 const theme = {
+    screen: {
+        phone: '500px',
+        tablet: '900px',
+        laptop: '1200px',
+        desktop: '1400px',
+    },
     fonts_thick: '\'Noto Sans\', sans-serif;',
     fonts_prime: '\'Playfair Display\', serif;',
     fonts_second: '\'Source Sans Pro\', sans-serif;',
@@ -27,8 +40,10 @@ const theme = {
         lemon: '#e3ff71',
         rasberry: '#ff719c',
         grape: '#8d71ff',
-        showroom: '#F2F2F2'
+        showroom: '#F2F2F2',
+        tiger: '#ff6550'
     }
 } as ITheme
 
 export default theme
+

@@ -8,12 +8,11 @@ interface IND {
 
 export const Nav_Div = styled.div<IND>`
     position: relative;
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     width:  100%;
-    min-width: 200px;
-    background-color: ${props => ((props.device === 'phone' || props.device === 'tablet') && props.toggle) ? 'rgba(26, 26, 26, 0.99)' : 'transparent'};
-    height: ${props => (props.device === 'phone' || props.device === 'tablet' && props.toggle) ? '100vh' : '10vh'};
+    background-color: ${props => ((props.device === 'phone' && props.toggle|| props.device === 'tablet') && props.toggle) ? 'rgba(26, 26, 26, 0.99)' : 'transparent'};
+    height: ${props => (props.device === 'phone' && props.toggle || props.device === 'tablet' && props.toggle) ? '100vh' : '10vh'};
     padding-top: 1rem;
 `
 

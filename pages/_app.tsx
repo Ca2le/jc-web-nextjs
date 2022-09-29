@@ -4,6 +4,7 @@ import * as CL from '../components/components.libary'
 import HamburgerToggleComponent from '../components/context/hamburger_toggle_context'
 import LangageContextComponent from '../components/context/langage_context.component'
 import ScreenSizeContextComponent from '../components/context/screen_size_context.component'
+import ScrollContextComponent from '../components/context/scrollContext.component'
 import { globalStyle as GlobalStyle } from '../global/styles/styles'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -11,13 +12,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     <React.Fragment>
       <GlobalStyle />
       <ScreenSizeContextComponent>
+        <ScrollContextComponent>
         <LangageContextComponent>
           <HamburgerToggleComponent>
             <CL.Navbar />
             <Component {...pageProps} />
-            <CL.Footer />
+            <CL.Footer /> 
           </HamburgerToggleComponent>
         </LangageContextComponent>
+        </ScrollContextComponent>
       </ScreenSizeContextComponent>
     </React.Fragment>
   )

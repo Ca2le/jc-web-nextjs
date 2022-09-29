@@ -29,13 +29,11 @@ function WordTransformerComponent() {
       // ----------------------------------------------------
       
       wordRotationTimer = setTimeout( () => {
-        console.log(intrestingTest2, ' ⚠️ ')
+
         if (wordIndex > wordArray.length - 2) {
-          console.log(' ⚠️ Inside the last frame ⚠️ ')
           setWordIndex( prevState => prevState = 0 )
           setCurrentKeyframe(keyFrames[intrestingTest2!])
         } else {
-          console.log(' 🔥 Inside the Loop i Loop 🔥 ')
           setWordIndex( prevState => prevState + 1 )
           setCurrentKeyframe(keyFrames[intrestingTest2!])
           wordRotation()
@@ -47,8 +45,6 @@ function WordTransformerComponent() {
       wordRotation()
       return () => clearTimeout(wordRotationTimer)
     }, [wordIndex])
-
-    console.log(currentKeyframe)
 
   return (
     <WordContainer>

@@ -17,6 +17,7 @@
         about_card_3_txt: string;
         showroom_h: string;
         showroom_projects: readonly {
+            id: string;
             title: string;
             subcategory: string;
             description: string;

@@ -5,19 +5,20 @@
     "nav_developers": "Utvecklare",
     "home_h_1": "Vi är en liten techbyrå som skapar ",
     "home_h_2": ["levande", "roliga", "galna", "vackra"],
-    "home_h_3": "appar åt er.",
+    "home_h_3": "webprogram åt er.",
     "readmore_txt": "Läs mer",
-    "about_h": "Våra fantastiska tjänster!",
-    "about_text": "Ett handplock av vad vi kan erbjuda ditt företag.",
-    "about_card_1_h": "Arkitektur",
-    "about_card_1_txt": "Låt oss knyta samman alla tänkbara funktioner  och även lämna utrymme för nya i framtiden.",
-    "about_card_2_h": "Utveckling",
+    "about_h": "",
+    "about_text": "",
+    "about_card_1_h": "Webutveckling och Strategi",
+    "about_card_1_txt": "At the heart of Slack are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies.",
+    "about_card_2_h": "Digital design och användarupplevelse",
     "about_card_2_txt": "Vi hjälper dig att behålla modern teknologi för att kunna hänga med i en snabbt växande tech-värld.",
-    "about_card_3_h": "Design",
+    "about_card_3_h": "Sökords optimering",
     "about_card_3_txt": "En app behöver kärlek, det är därför gränssnitt och upplevelse är vår specialitet,  vi tror på kärlek vid första ögonkastet.",
     "showroom_h": "Vårt Showroom",
     "showroom_projects": [
         {
+            "id": "card_",
             "title": "MenuRolette",
             "subcategory": "WebApplikation",
             "description": "En ny och rolig take på matkassen som ska ge ett större utbud till hemleveransen.",
@@ -26,6 +27,7 @@
             "img": "0"
         },
         {
+            "id": "card_",
             "title": "MenuRolette",
             "subcategory": "WebApplikation",
             "description": "En ny och rolig take på matkassen som ska ge ett större utbud till hemleveransen.",
@@ -34,6 +36,7 @@
             "img": "0"
         },
         {
+            "id": "card!_",
             "title": "MenuRolette",
             "subcategory": "WebApplikation",
             "description": "En ny och rolig take på matkassen som ska ge ett större utbud till hemleveransen.",
