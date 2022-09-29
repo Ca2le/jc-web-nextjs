@@ -15,7 +15,7 @@ const funny = keyframes`
 10%  {transform: translateY(0) scaleX(1) scaleY(1);}
 15% {transform: translateY(10%) scaleX(1.2) scaleY(0.8);}
 30% {transform: translateY(10%) scaleX(1.2) scaleY(0.8);}
-40% {transform: translateY(-25%) scaleX(0.95) scaleY(1.05);}
+40% {transform: translateY(-17%) scaleX(0.95) scaleY(1.05);}
 45% {transform: translateY(0) scaleX(1) scaleY(1);}
 55% {transform: translateY(10%) scaleX(1.2) scaleY(0.8);}
 60% {transform: translateY(0) scaleX(1) scaleY(1);}

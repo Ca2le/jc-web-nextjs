@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export const ScreenSizeContext = React.createContext<any>('')
 
 
-function getSize(setDevice: any) {
+function getSize(setDevice: React.Dispatch<React.SetStateAction<string>>) {
     {
         if (window.innerWidth > 1600) {
             return setDevice('desktop')
@@ -20,18 +20,23 @@ function getSize(setDevice: any) {
     }
 }
 
-function ScreenSizeContextComponent(props: { children: any }) {
+interface ScreenSizeContextComponentProps {
+    children: React.ReactNode
+}
+
+function ScreenSizeContextComponent({ children } : ScreenSizeContextComponentProps) {
     
     const [device, setDevice] = useState('');
 
     useEffect(() => {
         getSize(setDevice)
+        console.log(window.scrollY)
         window.addEventListener("resize", () => getSize(setDevice))
     }, [])
-
+    console.log(device)
     return (
         <ScreenSizeContext.Provider value={device}>
-            {props.children}
+            {children}
         </ScreenSizeContext.Provider>
     )
 }

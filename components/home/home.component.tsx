@@ -1,18 +1,23 @@
-import React, { useContext, useReducer, useState } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
+import styled from 'styled-components'
 import * as CL from '../components.libary'
-import { LangageContext } from '../context/langage_context.component'
+
+const Container = styled.div`
+  height: auto;
+  width: 100%;
+  
+`
 
 
 function Home() {
-
-  const { state_langange, dispatch } = useContext(LangageContext)
-
+  
+  
   return (
-    <React.Fragment>
-      <CL.Section_1 />
-      <CL.Section_2 />
-      <CL.Section_3 />
-    </React.Fragment>
+      <Container>
+        <CL.Section_1 />
+        <CL.Section_2 />
+        <CL.Section_3 />
+      </Container>
   )
 }
 

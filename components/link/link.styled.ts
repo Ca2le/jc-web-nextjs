@@ -5,11 +5,11 @@ interface IA {
 }
 export const A = styled.a<IA>`
     color: ${props => props.toggle ? theme.hexcolors.mint : theme.hexcolors.dark };
-    font-size: ${props => props.toggle ? '34px' : '22px' };
+    font-size: ${props => props.toggle ? '2.2rem' : '1.5rem' };
     text-decoration: none;
 
     &:hover{
         text-decoration: underline;
-        color: ${theme.hexcolors.rasberry};
+        color: ${theme.hexcolors.tiger};
     }
 `
