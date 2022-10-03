@@ -27,12 +27,10 @@ async function HandleCopyEvent<T>(event: T, setCopyToggle: CopyToggleType) {
 function Footer() {
   const [copyToggle, setCopyToggle] = useState({ className: 'copy', copied: 'no' })
   const { state_langange } = useContext(CL.LangageContext)
-
   const scrollContext = useContext(CL.ScrollContext)
   const footRef = useRef(null);
 
   useEffect( () => {
-    console.log('Footer loaded!')
     scrollContext.setState( (prevState: any) => {
     return {...prevState, footerSection: footRef}
   })

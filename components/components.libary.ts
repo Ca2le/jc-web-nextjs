@@ -74,6 +74,9 @@ export const Section_3 = Section_3Component
 import ButtonComponent from "./button/button";
 import LinkComponent from "./link/link.component";
 import LogoComponent from "./logo/logo.component";
+import InputScrollComponent from "./input_scroll/input_scroll.component";
+
+export const InputScroll = InputScrollComponent
 
 
 // Foot Components 🏈
@@ -92,5 +95,6 @@ export const Logo= LogoComponent
 // Other
 
 import { convertDeviceToSize as convertDeviceToSizeConverter } from './context/convertDeviceToSize'
+
 
 export const convertDeviceToSize = convertDeviceToSizeConverter

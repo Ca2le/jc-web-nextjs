@@ -13,7 +13,7 @@ function Section_3() {
     })
   },[]) 
   return (<>
-    <CL.Overlap />
+    {/* <CL.Overlap /> */}
     <OuterContainer ref={scrollRef}>
       <InnerContainer>
         <CL.Title />

@@ -18,7 +18,7 @@ function Home() {
         <CL.Section_2 />
         <CL.Section_3 />
       </Container>
-  )
+  ) 
 }
 
 export default Home

@@ -1,15 +1,16 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { MoreInfoBtn } from './info_btn.styled'
-import * as CL from '../../../components.libary'
 import { ScrollTo } from '../../../../scripts/scroll_to'
 
+interface IIBC{
+    reference: any;
+    text: string;
+}
 
-function InfoBtnComponent() {
-    const {state_langange} = useContext(CL.LangageContext)
-    const scrollContext = useContext(CL.ScrollContext)
-
+function InfoBtnComponent(props: IIBC) {
+   
         return(
-            <MoreInfoBtn onClick={ () => { ScrollTo(scrollContext.state.footerSection) }}>{state_langange.readmore_txt}</MoreInfoBtn>
+            <MoreInfoBtn onClick={ () => { ScrollTo(props.reference) }}>{props.text}</MoreInfoBtn>
         )
 }
 
