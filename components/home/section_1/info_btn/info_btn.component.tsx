@@ -1,6 +1,6 @@
 import React from 'react'
 import { MoreInfoBtn } from './info_btn.styled'
-import { ScrollTo } from '../../../../scripts/scroll_to'
+import { ScrollTo } from '../../../../scripts/scroll_features'
 
 interface IIBC{
     reference: any;

@@ -51,7 +51,7 @@ export const Rectangle = styled.div<IIC & ICC>`
     height: 21rem;
     background-color: ${props => props.imgBGColor};
     @media screen and (max-width: ${theme.screen.laptop}) {
-        width: 15rem;
+        width: 80%;
         height: 21rem;
         right: ${props => props.direction === 'right' ? '0' : ''};
         left: ${props => props.direction === 'right' ? '' : '0'};
@@ -91,8 +91,13 @@ export const TextContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    @media screen and (max-width: ${theme.screen.laptop}) {
+        width: 50%;
+        
+    }
     @media screen and (max-width: ${theme.screen.phone}) {
         width: 100%;
+        text-align: center;
     }
 `
 

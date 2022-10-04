@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import * as CL from '../components.libary'
-import { ScrollTo } from '../../scripts/scroll_to';
+import { ScrollTo } from '../../scripts/scroll_features';
 import { Input } from './input_scroll.styled'
 
 interface IISC {

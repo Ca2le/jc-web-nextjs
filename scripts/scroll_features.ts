@@ -1,8 +1,7 @@
 
-type ScrollToType = any
-export const ScrollTo = (element: ScrollToType) => {
+export const ScrollTo = (element: any) => {
     
-        console.log('lol 🐷')
+    
         window.scrollTo(
             {
                 top: element.current.offsetTop,

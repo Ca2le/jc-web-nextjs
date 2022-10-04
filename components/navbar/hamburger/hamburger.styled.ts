@@ -3,8 +3,10 @@ import theme from "../../../global/styles/theme";
 
 
 export const Hamburger = styled.div`
+    display: flex;
+    align-items: center;
     position: relative;
-    height: 3rem;
+    height: 20vh;
     width: 3rem;
 `
 export const Cheeze = styled.div`

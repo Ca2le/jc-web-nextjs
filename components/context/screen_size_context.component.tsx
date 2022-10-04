@@ -20,22 +20,52 @@ function getSize(setDevice: React.Dispatch<React.SetStateAction<string>>) {
     }
 }
 
+
+
 interface ScreenSizeContextComponentProps {
     children: React.ReactNode
 }
 
-function ScreenSizeContextComponent({ children } : ScreenSizeContextComponentProps) {
-    
-    const [device, setDevice] = useState('');
+function onScroll(scrollState: number, setScrollState: React.Dispatch<React.SetStateAction<number>>, setNavbarStatus: React.Dispatch<React.SetStateAction<string>>) {
+    let posY = window.scrollY
+    if (scrollState > posY && scrollState > 10) {
+        setNavbarStatus('show')
+        return setScrollState(window.scrollY)
+    }
+    if (scrollState < posY && scrollState > 10) {
+        setNavbarStatus('hidden')
+        return setScrollState(window.scrollY)
+    }
+    else {
+        setNavbarStatus('top')
+        return setScrollState(window.scrollY)
+    } 
 
+}
+
+function ScreenSizeContextComponent({ children }: ScreenSizeContextComponentProps) {
+
+    const [device, setDevice] = useState('');
+    const [scrollState, setScrollState] = useState(0)
+    const [navbarStatus, setNavbarStatus] = useState('top')
+    const screenObj = {
+        device,
+        navbarStatus
+    }
     useEffect(() => {
+
         getSize(setDevice)
-        console.log(window.scrollY)
         window.addEventListener("resize", () => getSize(setDevice))
+        return () => removeEventListener('resize', () => getSize)
     }, [])
-    console.log(device)
+    useEffect(() => {
+        window.addEventListener("scroll", () => onScroll(scrollState, setScrollState, setNavbarStatus))
+        return () => removeEventListener('scroll', () => onScroll)
+    }, [scrollState])
+    console.log(navbarStatus)
+    console.log(scrollState)
     return (
-        <ScreenSizeContext.Provider value={device}>
+        <ScreenSizeContext.Provider value={screenObj}>
             {children}
         </ScreenSizeContext.Provider>
     )

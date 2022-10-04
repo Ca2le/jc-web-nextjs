@@ -15,7 +15,8 @@ export const HamburgerToggleContext = React.createContext({} as IHamburger)
 
 function HamburgerToggleComponent(props: IHTC) {
 
-    const device = useContext(CL.ScreenSizeContext)
+    const screen = useContext(CL.ScreenSizeContext)
+    const {device, navbarStatus} = screen
 
     const [hamburgerToggle, setHamburgaretoggle] = useState(false)
 
