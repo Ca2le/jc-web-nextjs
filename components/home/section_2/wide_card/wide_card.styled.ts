@@ -12,6 +12,7 @@ export const CardContainer = styled.div<ICC>`
     height: 340px;
     width: 100%;
     display: flex;
+    
     flex-direction: ${props => props.direction === 'right' ? 'row-reverse' : 'row'};
     justify-content: center;
     align-items: center;
@@ -32,6 +33,7 @@ export const ImageContainer = styled.div`
     display: flex;
     width: 30rem;
     
+    
     @media screen and (max-width: ${theme.screen.laptop}) {
         width: 50%;
         
@@ -44,6 +46,7 @@ export const ImageContainer = styled.div`
     }
    `
 export const Rectangle = styled.div<IIC & ICC>`
+    border-radius: ${props => props.direction === 'left' ? '0px 7px 7px 0' : '7px 0px 0px 7px'};
     right: ${props => props.direction === 'right' ? '0' : ''};
     left: ${props => props.direction === 'right' ? '' : '0'};
     position: absolute;

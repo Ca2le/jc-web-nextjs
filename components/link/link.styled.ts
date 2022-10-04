@@ -4,12 +4,18 @@ interface IA {
     toggle: boolean
 }
 export const A = styled.a<IA>`
-    color: ${props => props.toggle ? theme.hexcolors.mint : theme.hexcolors.dark };
-    font-size: ${props => props.toggle ? '2.2rem' : '1.5rem' };
+    text-align: center;
+    color: ${props => props.toggle ? theme.hexcolors.mint : theme.hexcolors.dark};
+    font-size: ${props => props.toggle ? '2rem' : '1.4rem'};
     text-decoration: none;
 
     &:hover{
         text-decoration: underline;
         color: ${theme.hexcolors.tiger};
     }
+`
+export const LinkContainer = styled.div`
+   height:  13vh;
+   display: flex;
+   align-items: center;
 `

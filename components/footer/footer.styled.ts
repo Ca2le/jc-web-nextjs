@@ -13,7 +13,7 @@ export const FootContainer = styled.div`
     width: 100%;
     background-color: ${theme.hexcolors.mint};
     @media screen and (max-width: 900px) {
-        height: 40rem;
+        height: 60vh;
         align-items: stretch;
     }
 `
@@ -132,7 +132,7 @@ export const IconContainer = styled.div`
     position: relative;
     height: 30px;
     width: 30px;
-    background-color: #ff4f4f;
+    background-color: ${theme.hexcolors.rasberry};
     border: 1.5px solid ${theme.hexcolors.dark};
     .linkedin{
         fill: #fff;
@@ -147,29 +147,30 @@ export const CopyContainer = styled.div`
     position: relative;
     height: 100%;
     width: 20%;
-    background-color:  #ff4f4f;
+    background-color:  ${theme.hexcolors.rasberry};
     border: 1.5px solid ${theme.hexcolors.dark};
-/*     .copy {
+    
+    .copy {
             fill: #fff!important;
-            width: 32%;
+            width: 50%;
         }
     &:hover{
         cursor: pointer;
-            background-color: ${theme.hexcolors.dark}!important;
-            border: none;
-            border-color: #fff;
+        background-color: ${theme.hexcolors.dark}!important;
+        border: none;
+        border-color: #fff;
         .copy {
             fill: #fff!important;
            
         }
-    } */
+    }
     @media screen and (max-width: 900px) {
         height: 3rem;
         width: 20%;
-        /* .copy {
+        .copy {
             fill: #fff!important;
             width: 30%;
-        } */
+        }
     }
     
   
@@ -180,9 +181,9 @@ export const ContactBtnContainer = styled.div`
     display: flex;
     height: 3rem;
     width:20rem;
-
-/*     .check {
-            width: 32%;
+    border-radius: 0px;
+    .check {
+            width: 15%;
             background-color: #53a653!important;
             fill: #fff!important;
             border: none;
@@ -191,13 +192,13 @@ export const ContactBtnContainer = styled.div`
         background-color: #5cb85c!important;
             color: #fff!important;
             border: none;
-    } */
+    }
 
     @media screen and (max-width: 900px) {
         height: 3rem;
         width: 100%;
-   /*      .check {
-            width: 10%;
+        .check {
+            width: 20%;
             background-color: #53a653!important;
             fill: #fff!important;
             border: none;
@@ -206,7 +207,7 @@ export const ContactBtnContainer = styled.div`
         background-color: #5cb85c!important;
             color: #fff!important;
             border: none;
-    } */
+    }
     }
    
     

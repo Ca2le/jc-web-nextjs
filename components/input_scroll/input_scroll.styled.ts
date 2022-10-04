@@ -7,7 +7,7 @@ interface II {
 
 export const Input = styled.input<II>`
 color: ${props => props.toggle ? theme.hexcolors.mint : theme.hexcolors.dark };
-font-size: ${props => props.toggle ? '2.2rem' : '1.5rem' };
+font-size: ${props => props.toggle ? '2rem' : '1.3rem' };
 text-decoration: none;
 background: none;
 	border: none;

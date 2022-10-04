@@ -7,9 +7,9 @@ export const PopupContainer = styled.div`
     position: absolute;
     height: 80px;
     width: 140px;
-    top: 10%;
-    left: 15%;
-    transform: translateY(-80%);
+    top: 170%;
+    left: 0;
+    transform: translateY(-170%);
     .popup{
         fill: white;
     }

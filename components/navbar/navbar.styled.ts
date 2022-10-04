@@ -7,7 +7,7 @@ interface IND {
     status: string
 }
 export const Nav_Div = styled.div<IND>`
-    transition: all ease-out 0.25s;
+    transition: all ease-out 0.3s;
     z-index: 3;
     position: fixed;
     width:  100%;
@@ -19,8 +19,8 @@ export const Nav_Div = styled.div<IND>`
         }
         else return 'white'
     }};
-    height: ${props => (props.device === 'phone' && props.toggle || props.device === 'tablet' && props.toggle) ? '100vh' : '20vh'};
-    transform: translateY(${props => !props.toggle && props.status === 'hidden' ? '-40vh' : ''});
+    height: ${props => (props.device === 'phone' && props.toggle || props.device === 'tablet' && props.toggle) ? '100vh' : ' 13vh'};
+    transform: translateY(${props => !props.toggle && props.status === 'hidden' ? '-20vh' : ''});
     box-shadow: ${props => !props.toggle && props.status === 'top' ? '' : '0 0.8rem 0.8rem rgba(58, 58, 58, 0.12)'};
 `
 

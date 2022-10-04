@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
-import { A } from './link.styled'
+import { A, LinkContainer } from './link.styled'
 import * as CL from '../components.libary'
 
 interface LinkProps {
@@ -10,13 +10,15 @@ interface LinkProps {
 
 function LinkComponent(props: LinkProps) {
 
-  const {state} = useContext(CL.HamburgerToggleContext)
-  
+  const { state } = useContext(CL.HamburgerToggleContext)
+
   return (
     <React.Fragment>
-      <Link href={props.route} passHref >
-        <A toggle={state}>{props.value}</A>
-      </Link>
+      <LinkContainer>
+        <Link href={props.route} passHref >
+          <A toggle={state}>{props.value}</A>
+        </Link>
+      </LinkContainer>
     </React.Fragment>
   )
 }
