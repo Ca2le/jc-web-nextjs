@@ -7,7 +7,7 @@ interface ILC {
 
 
 export const LinkContainer = styled.div<ILC>`
-    height:  13vh;
+    height:  5rem;
     position: ${props => props.toggle ? 'absolute' : 'static'};
     top: ${props => props.toggle ? '30%' : 'auto'};
     left: ${props => props.toggle ? '50%' : 'auto'};

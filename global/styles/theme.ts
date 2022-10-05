@@ -40,7 +40,7 @@ const theme = {
         lemon: '#e3ff71',
         rasberry: '#ff719c',
         grape: '#8d71ff',
-        showroom: '#F2F2F2',
+        showroom: '#fafafa',
         tiger: '#ff6550'
     }
 } as ITheme

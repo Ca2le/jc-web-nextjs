@@ -4,13 +4,21 @@ import { ScrollTo } from '../../scripts/scroll_features';
 import { Input } from './input_scroll.styled'
 
 interface IISC {
-    reference: any;
-    text: string;
+  reference: any;
+  text: string;
+}
+
+
+function onClickLinkHandler(props: IISC, setState: React.Dispatch<React.SetStateAction<boolean>>) {
+  setState(false)
+  ScrollTo(props.reference)
 }
 function InputScrollComponent(props: IISC) {
-  const {state} = useContext(CL.HamburgerToggleContext)
+  const { state, setState } = useContext(CL.HamburgerToggleContext)
+
+  console.log('?? ', state)
   return (
-    <Input toggle={state} type='button' value={props.text} onClick={() => ScrollTo(props.reference)} />
+    <Input toggle={state} type='button' value={props.text} onClick={() => onClickLinkHandler(props, setState)} />
   )
 }
 

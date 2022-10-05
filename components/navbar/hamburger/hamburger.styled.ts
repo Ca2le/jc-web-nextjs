@@ -6,7 +6,7 @@ export const Hamburger = styled.div`
     display: flex;
     align-items: center;
     position: relative;
-    height:  13vh;
+    height:  4rem;
     width: 3rem;
 `
 export const Cheeze = styled.div`

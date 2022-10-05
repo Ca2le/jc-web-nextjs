@@ -24,7 +24,7 @@ function Section_2() {
           <WideCard direction={'left'} imgBGColor={theme.hexcolors.grape} header={state_langange.about_card_3_h} text={state_langange.about_card_3_txt} link={'www.link.com'} />
         </CardContainer>
       </S2InnerContainer>
-      
+      <CL.Overlap />
     </S2Container>
   )
 }

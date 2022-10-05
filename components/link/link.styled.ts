@@ -11,11 +11,11 @@ export const A = styled.a<IA>`
 
     &:hover{
         text-decoration: underline;
-        color: ${theme.hexcolors.tiger};
+        color: ${theme.hexcolors.rasberry};
     }
 `
 export const LinkContainer = styled.div`
-   height:  13vh;
+   height:  '5rem';
    display: flex;
    align-items: center;
 `

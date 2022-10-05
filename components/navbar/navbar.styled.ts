@@ -17,15 +17,15 @@ export const Nav_Div = styled.div<IND>`
         } if (!props.toggle && props.status === 'top') {
             return 'transparent'
         }
-        else return 'white'
+        else return theme.hexcolors.mint
     }};
-    height: ${props => (props.device === 'phone' && props.toggle || props.device === 'tablet' && props.toggle) ? '100vh' : ' 13vh'};
+    height: ${props => (props.device === 'phone' && props.toggle || props.device === 'tablet' && props.toggle) ? '100vh' : '5rem'};
     transform: translateY(${props => !props.toggle && props.status === 'hidden' ? '-20vh' : ''});
     box-shadow: ${props => !props.toggle && props.status === 'top' ? '' : '0 0.8rem 0.8rem rgba(58, 58, 58, 0.12)'};
 `
 
 export const Nav_Wrapper = styled.div`
-    height: 80%;
+    height: 100%;
     width:  80%;
     margin: auto;
     display: flex;

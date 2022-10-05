@@ -6,15 +6,16 @@ import { ContactBtnContainer, CopyContainer, IconContainer, Line, BottomContaine
 type CopyToggleType = React.Dispatch<React.SetStateAction<{
   className: string;
   copied: string;
+  copiedContainer: string;
 }>>
 
 
 async function HandleCopyEvent<T>(event: T, setCopyToggle: CopyToggleType) {
   try {
     await navigator.clipboard.writeText('carl@jumpcode.org').then(() => {
-      setCopyToggle({ className: 'check', copied: 'yes' })
+      setCopyToggle({ className: 'check', copied: 'yes', copiedContainer: 'yes_container' })
       setTimeout(() => {
-        setCopyToggle({ className: 'copy', copied: 'no' })
+        setCopyToggle({ className: 'copy', copied: 'no', copiedContainer: 'no_container' })
       }, 5000)
     }
     )
@@ -25,17 +26,17 @@ async function HandleCopyEvent<T>(event: T, setCopyToggle: CopyToggleType) {
 
 }
 function Footer() {
-  const [copyToggle, setCopyToggle] = useState({ className: 'copy', copied: 'no' })
+  const [copyToggle, setCopyToggle] = useState({ className: 'copy', copied: 'no', copiedContainer: 'no_container' })
   const { state_langange } = useContext(CL.LangageContext)
   const scrollContext = useContext(CL.ScrollContext)
   const footRef = useRef(null);
 
-  useEffect( () => {
-    scrollContext.setState( (prevState: any) => {
-    return {...prevState, footerSection: footRef}
-  })
-},[]) 
-  
+  useEffect(() => {
+    scrollContext.setState((prevState: any) => {
+      return { ...prevState, footerSection: footRef }
+    })
+  }, [])
+
   return (
     <FootContainer ref={footRef}>
       <UpperContainer>
@@ -45,9 +46,10 @@ function Footer() {
           <ContactInnerContainer>
             <Message>{state_langange.foot_h}</Message>
             <ContactBtnContainer >
+              
               <ContactBtn className={copyToggle.copied} type={'text'} value={'carl@jumpcode.org'} readOnly />
-              <CopyContainer onClick={(event) => HandleCopyEvent(event, setCopyToggle)} className={copyToggle.className}>
-                {copyToggle.copied === 'yes' ? <CL.CopyMessage /> : null}
+              <CopyContainer className={copyToggle.copiedContainer} copied={copyToggle.copied} onClick={(event) => HandleCopyEvent(event, setCopyToggle)} >
+                {/* {copyToggle.copied === 'yes' ? <CL.CopyMessage /> : null} */}
                 <CL.Icon icon_type={copyToggle.className} />
               </CopyContainer>
             </ContactBtnContainer>

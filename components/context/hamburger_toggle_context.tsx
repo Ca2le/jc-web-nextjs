@@ -18,7 +18,7 @@ function HamburgerToggleComponent(props: IHTC) {
     const screen = useContext(CL.ScreenSizeContext)
     const {device, navbarStatus} = screen
 
-    const [hamburgerToggle, setHamburgaretoggle] = useState(false)
+    const [hamburgerToggle, setHamburgaretoggle] = useState<boolean>(false)
 
     const hamburger: IHamburger = {
         state: hamburgerToggle,

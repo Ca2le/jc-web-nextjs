@@ -4,7 +4,7 @@ interface ICopyrightLine {
 
 }
 export const FootContainer = styled.div`
-   
+    
     position: relative;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ export const FootContainer = styled.div`
     background-color: ${theme.hexcolors.mint};
     @media screen and (max-width: 900px) {
         height: 60vh;
-        align-items: stretch;
+        padding-top: 3rem;
     }
 `
 export const UpperContainer = styled.div`
@@ -25,6 +25,7 @@ export const UpperContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 900px) {
+     
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -92,10 +93,10 @@ export const ContactBtn = styled.input`
     max-width: 25rem;
     @media screen and (max-width: 900px) {
         height: 100%;
-        width: 80%;
         font-size: 1.3rem;
         max-width: 100%;
-      }
+    }
+
     
 `
 export const SocialMediaContainer = styled.div`
@@ -103,6 +104,8 @@ export const SocialMediaContainer = styled.div`
     display: flex;
     gap: 10px;
     @media screen and (max-width: 900px) {
+        align-items: center;
+        justify-content: center;
         width: 8rem;
     }
     
@@ -113,7 +116,7 @@ export const BottomContainer = styled.div`
     bottom: 0;
     transform: translateY(0);
     background-color: #141414;
-    height: 10%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,76 +144,66 @@ export const IconContainer = styled.div`
         fill: #fff;
     }
 
-   
 `
-export const CopyContainer = styled.div`
+interface ICC {
+    copied: string
+}
+export const CopyContainer = styled.div<ICC>`
     position: relative;
     height: 100%;
-    width: 20%;
-    background-color:  ${theme.hexcolors.rasberry};
+    width: 5rem;
     border: 1.5px solid ${theme.hexcolors.dark};
-    
-    .copy {
-            fill: #fff!important;
-            width: 50%;
+    .copy{
+        fill: #fff;
+        width: 45%;
         }
+    .check{
+        width: 45%;
+        fill: #fff;
+        }
+    
+
     &:hover{
-        cursor: pointer;
-        background-color: ${theme.hexcolors.dark}!important;
-        border: none;
-        border-color: #fff;
-        .copy {
-            fill: #fff!important;
-           
+        cursor: ${props => props.copied === 'no' ? 'pointer;' : 'auto'};
+        .copy{
+            fill: #fff;
+            width: 45%;
         }
-    }
-    @media screen and (max-width: 900px) {
-        height: 3rem;
-        width: 20%;
-        .copy {
-            fill: #fff!important;
-            width: 30%;
+        .check{
+            width: 45%;
+            fill: #fff;
         }
+        
+       
     }
-    
-  
-  
-    
+
+
+ 
 `
 export const ContactBtnContainer = styled.div`
     display: flex;
     height: 3rem;
     width:20rem;
-    border-radius: 0px;
-    .check {
-            width: 15%;
-            background-color: #53a653!important;
-            fill: #fff!important;
-            border: none;
-        }
-    .yes{
-        background-color: #5cb85c!important;
-            color: #fff!important;
-            border: none;
+    
+    .no{
+        background-color: transparent;
     }
-
-    @media screen and (max-width: 900px) {
-        height: 3rem;
-        width: 100%;
-        .check {
-            width: 20%;
-            background-color: #53a653!important;
-            fill: #fff!important;
-            border: none;
-        }
     .yes{
-        background-color: #5cb85c!important;
-            color: #fff!important;
-            border: none;
+        color: #fff;
+        border: none;
+        background-color: ${theme.hexcolors.rasberry};
     }
+  
+    .yes_container{
+        border: none;
+        background-color: #e67496;
+    }
+    .no_container{
+        background-color: ${theme.hexcolors.rasberry};
+        &:hover{
+            background-color: ${theme.hexcolors.dark};
+        }
     }
    
-    
-    
     
 `

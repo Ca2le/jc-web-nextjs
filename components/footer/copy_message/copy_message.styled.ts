@@ -3,14 +3,12 @@ import theme from "../../../global/styles/theme";
 
 export const PopupContainer = styled.div`
     z-index: 2;
-    transition: 1s;
     position: absolute;
-    height: 80px;
-    width: 140px;
-    top: 170%;
-    left: 0;
-    transform: translateY(-170%);
+    height: 4rem;
+    width: 7rem;
+    bottom: 100%;
     .popup{
+        left: 45%;
         fill: white;
     }
 `
@@ -19,9 +17,9 @@ export const Message = styled.p`
     font-family: ${theme.fonts_thick};
     font-weight: ${theme.font_weights.bold};
     position: absolute;
-    font-size: 13px;
+    font-size: 15px;
     top: 40%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -40%);
 `
 

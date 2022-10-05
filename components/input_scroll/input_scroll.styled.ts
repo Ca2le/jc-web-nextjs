@@ -15,7 +15,7 @@ background: none;
 	outline: inherit;
 &:hover{
     text-decoration: underline;
-    color: ${theme.hexcolors.tiger};
+    color: ${theme.hexcolors.rasberry};
 }
 
 `
