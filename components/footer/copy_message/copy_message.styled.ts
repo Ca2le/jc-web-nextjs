@@ -8,7 +8,7 @@ export const PopupContainer = styled.div`
     width: 7rem;
     bottom: 100%;
     .popup{
-        left: 45%;
+        left: 60%;
         fill: white;
     }
 `
@@ -19,7 +19,7 @@ export const Message = styled.p`
     position: absolute;
     font-size: 15px;
     top: 40%;
-    left: 45%;
+    left: 60%;
     transform: translate(-50%, -40%);
 `
 

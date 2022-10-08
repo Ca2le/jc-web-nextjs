@@ -10,11 +10,13 @@ import { LangageContext as  LangageContextComponent} from "./context/langage_con
 import { ScreenSizeContext as  ScreenSizeContextComponent} from "./context/screen_size_context.component";
 import { HamburgerToggleContext as HamburgerToggleContextComponent } from "./context/hamburger_toggle_context";
 import { ScrollContext as ScrollContextComponent } from "./context/scrollContext.component";
+import { IntersectionContext as IntersectionContextComponent } from "./context/intersection_context";
 
 export const LangageContext = LangageContextComponent
 export const ScreenSizeContext = ScreenSizeContextComponent
 export const HamburgerToggleContext = HamburgerToggleContextComponent
 export const ScrollContext = ScrollContextComponent
+export const IntersectionContext = IntersectionContextComponent
 // Template Components 🦕
 
 import FooterComponent from "./footer/footer.component";
@@ -95,6 +97,7 @@ export const Logo= LogoComponent
 // Other
 
 import { convertDeviceToSize as convertDeviceToSizeConverter } from './context/convertDeviceToSize'
+
 
 
 export const convertDeviceToSize = convertDeviceToSizeConverter

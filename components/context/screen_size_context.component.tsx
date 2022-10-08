@@ -11,7 +11,10 @@ function getSize(setDevice: React.Dispatch<React.SetStateAction<string>>) {
         if (window.innerWidth > 800 && window.innerWidth <= 1600) {
             return setDevice('laptop')
         }
-        if (window.innerWidth <= 800 && window.innerWidth > 429) {
+        if (window.innerWidth <= 800 && window.innerWidth > 600) {
+            return setDevice('tablet')
+        }
+        if (window.innerWidth <= 800 && window.innerWidth > 417) {
             return setDevice('tablet')
         }
         else {
@@ -62,8 +65,6 @@ function ScreenSizeContextComponent({ children }: ScreenSizeContextComponentProp
         window.addEventListener("scroll", () => onScroll(scrollState, setScrollState, setNavbarStatus))
         return () => removeEventListener('scroll', () => onScroll)
     }, [scrollState])
-    console.log(navbarStatus)
-    console.log(scrollState)
     return (
         <ScreenSizeContext.Provider value={screenObj}>
             {children}

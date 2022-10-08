@@ -18,8 +18,6 @@ function Logo(props: SVGProps) {
   const screen = useContext(CL.ScreenSizeContext)
   const {device, navbarStatus} = screen
   const { state, setState } = useContext(CL.HamburgerToggleContext)
-  
-  console.log(device)
   return (
       <SVGContainer>
         <SVG device={device} onClick={() => handleLogoClick(props.reference, setState)} viewBox="0 0 282.03 225.52" preserveAspectRatio="none">

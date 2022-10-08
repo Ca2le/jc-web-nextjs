@@ -23,7 +23,7 @@ export const InnerTextDiv = styled.div`
     @media screen and (max-width: 946px){
         width: 29rem; 
     }
-    @media screen and (max-width: ${theme.screen.phone}){
+    @media screen and (max-width: ${theme.screen.tablet}){
         width: 24rem; 
     }
 

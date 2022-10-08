@@ -1,28 +1,60 @@
-import React from 'react'
-import { CardContainer, Header, ImageContainer, TextContainer, TextLink, Text, Rectangle } from './wide_card.styled'
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import * as CL from '../../../components.libary'
+import { OuterTextContainer, CardContainer, Header, ImageContainer, TextContainer, TextLink, Text, Rectangle } from './wide_card.styled'
 type WideCardProps = {
     direction: string;
     imgBGColor: string;
     header: string;
     text: string;
     link: string;
-
+    id: string;
+    index: number;
 }
-function WideCardComponent({ direction, imgBGColor, header, text, link }: WideCardProps) {
+type InitialStateType = boolean[]
 
-        return (
-            <CardContainer direction={direction}>
-                <ImageContainer>
-                    <Rectangle direction={direction} imgBGColor={imgBGColor} />
-                </ImageContainer>
-                <TextContainer>
-                    <Header>{header}</Header>
+function WideCardComponent({ id, direction, imgBGColor, header, text, link, index }: WideCardProps) {
+
+    const ref = useRef(null);
+    const { refArr, setRefArr } = useContext(CL.IntersectionContext)
+    const initialState: InitialStateType = [false, false, false]
+    const [cardVisabillty, setCardVisabillty] = useState(initialState)
+    const options = {
+        rootMargin: '0px',
+        threshold: 0.1
+    }
+    useEffect(() => {
+        const refObj = refArr
+        refObj[index].reference = ref
+        setRefArr(refObj)
+
+    }, [])
+    useEffect(() => {
+        let observer = new IntersectionObserver((entries) => {
+            const entry = entries[0]
+            //@ts-ignore
+            setCardVisabillty(entry.isIntersecting)
+            
+        }, options);
+        observer.observe(refArr[index].reference.current)
+
+
+    }, [])
+
+    return (
+        <CardContainer cardVisabillty={cardVisabillty} id={id} ref={ref} direction={direction}>
+            <ImageContainer cardVisabillty={cardVisabillty} direction={direction}>
+                <Rectangle cardVisabillty={cardVisabillty} direction={direction} imgBGColor={imgBGColor} />
+            </ImageContainer>
+            <OuterTextContainer cardVisabillty={cardVisabillty} direction={direction}>
+                <TextContainer cardVisabillty={cardVisabillty} direction={direction}>
+                    <Header >{header}</Header>
                     <Text>{text}</Text>
                     <TextLink>{link}</TextLink>
                 </TextContainer>
-            </CardContainer>
-        )
-    }
-   
+            </OuterTextContainer>
+        </CardContainer>
+    )
+}
+
 
 export default WideCardComponent

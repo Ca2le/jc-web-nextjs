@@ -7,13 +7,11 @@ function Section_3() {
   const scrollRef = useRef(null);
  
   useEffect( () => {
-      console.log('S3 loaded!')
       scrollContext.setState( (prevState: any) => {
       return {...prevState, showroomSection: scrollRef}
     })
   },[]) 
-  return (<>
-    {/* <CL.Overlap /> */}
+  return (
     <OuterContainer ref={scrollRef}>
       <InnerContainer>
         <CL.Title />
@@ -21,7 +19,6 @@ function Section_3() {
         <CL.Subtext />
       </InnerContainer>
     </OuterContainer>
-  </>
   )
 }
 

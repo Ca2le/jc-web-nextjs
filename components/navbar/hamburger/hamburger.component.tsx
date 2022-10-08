@@ -14,7 +14,7 @@ function HamburgerComponent() {
     } else {
         return (
             <Hamburger onClick={ () => setState(!state)}>
-            <h1>{state ? '🐹' : '🐶'}</h1>
+            <Cheeze toggle={state}/>
         </Hamburger>
         )
     }

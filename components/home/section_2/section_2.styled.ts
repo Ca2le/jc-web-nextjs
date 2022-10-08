@@ -16,6 +16,7 @@ export const S2Container = styled.div`
 
 `
 export const S2InnerContainer = styled.div`
+ 
     z-index: 2;
     height: 100%;
     margin-bottom: 4rem;
@@ -33,6 +34,13 @@ export const S2InnerContainer = styled.div`
 
 `
 export const CardContainer = styled.div`
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 
 `
 export const HeaderContainer = styled.div`

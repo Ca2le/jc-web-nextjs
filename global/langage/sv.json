@@ -1,20 +1,48 @@
 {
     "nav_services": "Tjänster",
     "nav_showroom": "Showroom",
-    "nav_contact": "Kontakt",   
+    "nav_contact": "Kontakt",
     "nav_developers": "Utvecklare",
     "home_h_1": "Vi är en liten techbyrå som skapar ",
-    "home_h_2": ["levande", "roliga", "galna", "vackra"],
+    "home_h_2": [
+        "levande",
+        "roliga",
+        "galna",
+        "vackra"
+    ],
     "home_h_3": "webprogram åt er.",
     "readmore_txt": "Läs mer",
     "about_h": "",
     "about_text": "",
-    "about_card_1_h": "Webutveckling och Strategi",
-    "about_card_1_txt": "At the heart of Slack are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies.",
-    "about_card_2_h": "Digital design och användarupplevelse",
-    "about_card_2_txt": "Vi hjälper dig att behålla modern teknologi för att kunna hänga med i en snabbt växande tech-värld.",
-    "about_card_3_h": "Sökords optimering",
-    "about_card_3_txt": "En app behöver kärlek, det är därför gränssnitt och upplevelse är vår specialitet,  vi tror på kärlek vid första ögonkastet.",
+    "about_card": [
+        {
+            "id": "_ID:wc1",
+            "direction": "left",
+            "link": "www.jumpcode.org",
+            "image": "",
+            "background_color": "#ff719c",
+            "about_card_h": "Webutveckling och Strategi",
+            "about_card_txt": "At the heart of Slack are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies."
+        },
+        {
+            "id": "_ID:wc2",
+            "direction": "right",
+            "link": "www.jumpcode.org",
+            "image": "",
+            "background_color": "#8d71ff",
+            "about_card_h": "Digital design och användarupplevelse",
+            "about_card_txt": "At the heart of Slack are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies."
+        },
+        {
+            "id": "_ID:wc3",
+            "direction": "left",
+            "link": "www.jumpcode.org",
+            "image": "",
+            "background_color": "#e3ff71",
+            "about_card_h": "SEO",
+            "about_card_txt": "At the heart of Slack are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies."
+        }
+    ],
     "showroom_h": "Vårt Showroom",
     "showroom_projects": [
         {

@@ -15,8 +15,6 @@ function onClickLinkHandler(props: IISC, setState: React.Dispatch<React.SetState
 }
 function InputScrollComponent(props: IISC) {
   const { state, setState } = useContext(CL.HamburgerToggleContext)
-
-  console.log('?? ', state)
   return (
     <Input toggle={state} type='button' value={props.text} onClick={() => onClickLinkHandler(props, setState)} />
   )

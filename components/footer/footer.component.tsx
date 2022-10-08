@@ -49,7 +49,7 @@ function Footer() {
               
               <ContactBtn className={copyToggle.copied} type={'text'} value={'carl@jumpcode.org'} readOnly />
               <CopyContainer className={copyToggle.copiedContainer} copied={copyToggle.copied} onClick={(event) => HandleCopyEvent(event, setCopyToggle)} >
-                {/* {copyToggle.copied === 'yes' ? <CL.CopyMessage /> : null} */}
+                {copyToggle.copied === 'yes' ? <CL.CopyMessage /> : null}
                 <CL.Icon icon_type={copyToggle.className} />
               </CopyContainer>
             </ContactBtnContainer>

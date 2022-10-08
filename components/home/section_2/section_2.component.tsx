@@ -8,25 +8,25 @@ function Section_2() {
   const { state_langange } = useContext(LangageContext)
   const scrollContext = useContext(CL.ScrollContext)
   const aboutRef = useRef(null);
- 
-  useEffect( () => {
-    console.log('S2 Loaded')
-    scrollContext.setState( (prevState: any) => {
-      return {...prevState, aboutSection: aboutRef}
+
+
+  useEffect(() => {
+    scrollContext.setState((prevState: any) => {
+      return { ...prevState, aboutSection: aboutRef }
     })
-  },[]) 
-  return (
-    <S2Container ref={aboutRef}>
-      <S2InnerContainer>
-        <CardContainer>
-          <WideCard direction={'left'} imgBGColor={theme.hexcolors.rasberry} header={state_langange.about_card_1_h} text={state_langange.about_card_1_txt} link={'www.link.com'} />
-          <WideCard direction={'right'} imgBGColor={theme.hexcolors.lemon} header={state_langange.about_card_2_h} text={state_langange.about_card_2_txt} link={'www.link.com'} />
-          <WideCard direction={'left'} imgBGColor={theme.hexcolors.grape} header={state_langange.about_card_3_h} text={state_langange.about_card_3_txt} link={'www.link.com'} />
-        </CardContainer>
-      </S2InnerContainer>
-      <CL.Overlap />
-    </S2Container>
-  )
+  }, [])
+ 
+  return <S2Container ref={aboutRef}>
+    <S2InnerContainer >
+      <CardContainer >
+        {state_langange.about_card.map( (element, index) => {
+          return <WideCard key={element.id} index={index} id={element.id} direction={element.direction} imgBGColor={element.background_color} header={element.about_card_h} text={element.about_card_txt} link={element.link} />
+        })}
+      </CardContainer>
+    </S2InnerContainer>
+    <CL.Overlap />
+  </S2Container>
+
 }
 
 export default Section_2

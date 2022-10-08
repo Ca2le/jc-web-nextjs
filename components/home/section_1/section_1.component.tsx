@@ -8,7 +8,6 @@ function Section_1() {
   const heroRef = useRef(null);
 
   useEffect( () => {
-    console.log('Hero loaded!')
     scrollContext.setState( (prevState: any) => {
     return {...prevState, heroSection: heroRef}
   })
