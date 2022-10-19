@@ -11,17 +11,18 @@ export const Nav_Div = styled.div<IND>`
     z-index: 3;
     position: fixed;
     width:  100%;
+    border-radius: 0 0 3px 3px;
     background-color: ${props => {
         if((props.device === 'phone' && props.toggle|| props.device === 'tablet') && props.toggle) {
             return 'rgba(26, 26, 26, 0.99)'
         } if (!props.toggle && props.status === 'top') {
             return 'transparent'
         }
-        else return theme.hexcolors.mint
+        else return '#fff'
     }};
     height: ${props => (props.device === 'phone' && props.toggle || props.device === 'tablet' && props.toggle) ? '100vh' : '5rem'};
     transform: translateY(${props => !props.toggle && props.status === 'hidden' ? '-20vh' : ''});
-    box-shadow: ${props => !props.toggle && props.status === 'top' ? '' : '0 0.8rem 0.8rem rgba(58, 58, 58, 0.12)'};
+    box-shadow: ${props => !props.toggle && props.status === 'top' ? '' : '0 7px 1px rgba(58, 58, 58, 0.1)'};
 `
 
 export const Nav_Wrapper = styled.div`

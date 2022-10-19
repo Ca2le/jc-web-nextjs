@@ -26,8 +26,8 @@ const theme = {
     screen: {
         phone: '500px',
         tablet: '900px',
-        laptop: '1200px',
-        desktop: '1400px',
+        laptop: '1799px',
+        desktop: '1800px',
     },
     fonts_thick: '\'Noto Sans\', sans-serif;',
     fonts_prime: '\'Playfair Display\', serif;',

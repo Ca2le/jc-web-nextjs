@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import * as CL from '../../../components.libary'
 import { OuterTextContainer, CardContainer, Header, ImageContainer, TextContainer, TextLink, Text, Rectangle } from './wide_card.styled'
+
 type WideCardProps = {
     direction: string;
     imgBGColor: string;
@@ -19,8 +20,8 @@ function WideCardComponent({ id, direction, imgBGColor, header, text, link, inde
     const initialState: InitialStateType = [false, false, false]
     const [cardVisabillty, setCardVisabillty] = useState(initialState)
     const options = {
-        rootMargin: '0px',
-        threshold: 0.1
+        rootMargin: '0%',
+        threshold: 0
     }
     useEffect(() => {
         const refObj = refArr

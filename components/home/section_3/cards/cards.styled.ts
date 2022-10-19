@@ -3,15 +3,13 @@ import theme from "../../../../global/styles/theme";
 
 export const Div = styled.div`
 display: flex;
-justify-content: space-between;
+justify-content: center;
 width: 100%;
-gap: 1rem;
+gap: 5%;
 
-@media screen and (max-width: ${theme.screen.tablet}) {
+
+@media screen and (max-width: 930px) {
     width: 100%;
-    gap: 1rem;
-}
-@media screen and (max-width: ${theme.screen.tablet}) {
     flex-direction: column;
     align-items: center;
 }

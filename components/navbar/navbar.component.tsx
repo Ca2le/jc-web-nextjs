@@ -14,11 +14,13 @@ function Navbar(): ReactElement {
   return (
 
       <Nav_Div toggle={state} device={device} status={navbarStatus}>
+        
         <Nav_Wrapper>
           <CL.Logo reference={scrollContext.state.heroSection} color={state ? theme.hexcolors.mint : theme.hexcolors.dark} />
           <CL.NavLinks />
           <CL.HamburgerComponent />
         </Nav_Wrapper>
+       
       </Nav_Div>
   )
 }

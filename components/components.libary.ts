@@ -99,5 +99,8 @@ export const Logo= LogoComponent
 import { convertDeviceToSize as convertDeviceToSizeConverter } from './context/convertDeviceToSize'
 
 
-
 export const convertDeviceToSize = convertDeviceToSizeConverter
+
+// Developer Page
+import DeveloperPageComponent from "./developer_page/developer_page.component";
+export const DeveloperPage = DeveloperPageComponent

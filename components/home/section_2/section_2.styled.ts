@@ -12,6 +12,7 @@ export const S2Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     
 
 `
@@ -22,11 +23,9 @@ export const S2InnerContainer = styled.div`
     margin-bottom: 4rem;
     @media screen and (max-width: ${theme.screen.laptop}) and (orientation: landscape){
         width: 100%;
-    }
-
-    @media screen and (min-width: ${theme.screen.desktop}){
         margin-bottom: 6rem;
     }
+
     @media screen and (max-width: 900px){
         margin-bottom: 6rem;
         width: 100%;
@@ -40,14 +39,6 @@ export const CardContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-
-`
-export const HeaderContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5rem;
-    padding-top: 2rem;
+    gap: 0.5rem;
 
 `

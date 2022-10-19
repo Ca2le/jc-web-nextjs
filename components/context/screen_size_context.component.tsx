@@ -56,7 +56,6 @@ function ScreenSizeContextComponent({ children }: ScreenSizeContextComponentProp
         navbarStatus
     }
     useEffect(() => {
-
         getSize(setDevice)
         window.addEventListener("resize", () => getSize(setDevice))
         return () => removeEventListener('resize', () => getSize)

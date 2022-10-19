@@ -1,24 +1,37 @@
+import Link from 'next/link';
 import React from 'react'
 import { SVG } from './icon.styled'
 interface II {
     icon_type: string;
+    stroke_width?: string;
+    stroke_color?: string;
+    href?: string
 
 }
 interface IICON {
     viewport: string;
     path: string;
+    stroke_width?: string;
+    stroke_color?: string;
+
 }
-function IconComponent({ icon_type }: II) {
+function handleClickEvent() {
+
+}
+
+function IconComponent({ icon_type, stroke_width, stroke_color, href }: II) {
 
     let icon: IICON = {
         viewport: '',
-        path: ''
+        path: '',
+        stroke_width: '',
+        stroke_color: ''
     }
 
     switch (icon_type) {
-        case 'facebook':
-            icon.path = 'M20.51,23.05l1.14-7.42h-7.12v-4.81c0-2.03,.99-4.01,4.18-4.01h3.23V.5s-2.94-.5-5.74-.5C10.34,0,6.51,3.55,6.51,9.98v5.65H0v7.42H6.51v17.93H14.53V23.05h5.98Z'
-            icon.viewport = '0 0 21.95 40.97'
+        case 'github':
+            icon.path = 'M12.88,29.55c0,.15-.17,.27-.39,.27-.25,.02-.42-.1-.42-.27,0-.15,.17-.27,.39-.27,.22-.02,.42,.1,.42,.27Zm-2.32-.34c-.05,.15,.1,.32,.32,.37,.19,.07,.42,0,.46-.15s-.1-.32-.32-.39c-.19-.05-.41,.02-.46,.17h0Zm3.3-.13c-.22,.05-.37,.19-.34,.37,.02,.15,.22,.25,.44,.19,.22-.05,.37-.19,.34-.34-.02-.14-.22-.24-.44-.22ZM18.76,.5C8.41,.5,.5,8.36,.5,18.7c0,8.27,5.21,15.35,12.64,17.84,.95,.17,1.29-.42,1.29-.9s-.02-3.01-.02-4.58c0,0-5.22,1.12-6.32-2.22,0,0-.85-2.17-2.07-2.73,0,0-1.71-1.17,.12-1.15,0,0,1.86,.15,2.88,1.92,1.63,2.88,4.37,2.05,5.44,1.56,.17-1.19,.66-2.02,1.19-2.51-4.17-.46-8.38-1.07-8.38-8.24,0-2.05,.57-3.08,1.76-4.39-.19-.48-.83-2.48,.19-5.07,1.56-.48,5.15,2.01,5.15,2.01,1.49-.42,3.1-.63,4.68-.63s3.19,.22,4.68,.63c0,0,3.59-2.51,5.15-2.01,1.02,2.59,.39,4.58,.19,5.07,1.19,1.32,1.92,2.35,1.92,4.39,0,7.2-4.39,7.77-8.56,8.24,.69,.59,1.27,1.71,1.27,3.46,0,2.51-.02,5.62-.02,6.24,0,.48,.34,1.07,1.29,.9,7.46-2.48,12.52-9.56,12.52-17.83C37.5,8.36,29.11,.5,18.76,.5ZM7.75,26.23c-.1,.07-.07,.25,.05,.39,.12,.12,.29,.17,.39,.07,.1-.07,.07-.25-.05-.39-.12-.12-.29-.17-.39-.07Zm-.81-.6c-.05,.1,.02,.22,.17,.29,.12,.07,.27,.05,.32-.05,.05-.1-.02-.22-.17-.29-.15-.04-.27-.02-.32,.05Zm2.42,2.66c-.12,.1-.07,.32,.1,.46,.17,.17,.39,.19,.48,.07,.1-.1,.05-.32-.1-.46-.16-.17-.39-.19-.48-.07Zm-.85-1.1c-.12,.07-.12,.27,0,.44s.32,.25,.42,.17c.12-.1,.12-.29,0-.46-.1-.17-.3-.25-.42-.15h0Z'
+            icon.viewport = '0 -1 38 37.08'
             break;
         case 'linkedin':
             icon.path = 'M7.5,33H0.8V11.4h6.7V33z M4.2,8.5C2,8.5,0.3,6.7,0.3,4.5c0-2.1,1.7-3.9,3.9-3.9c2.1,0,3.9,1.7,3.9,3.9C8.1,6.7,6.3,8.5,4.2,8.5z M32.7,33H26V22.5c0-2.5-0.1-5.7-3.5-5.7c-3.5,0-4,2.7-4,5.5V33h-6.7V11.4h6.4v2.9h0.1c0.9-1.7,3.1-3.5,6.4-3.5c6.8,0,8,4.5,8,10.3L32.7,33L32.7,33z'
@@ -38,11 +51,19 @@ function IconComponent({ icon_type }: II) {
             break;
         default: ''
     }
-    return (
-        <SVG className={icon_type} xmlns="http://www.w3.org/2000/svg" viewBox={icon.viewport}>
-            <path d={icon.path} />
+
+    //If icon has a href return a next link else render only a svg icon, Fix this when time, ⬇️ 
+    if(href) {
+        return <a href={`${href}`}>
+        <SVG onClick={() => handleClickEvent()} className={icon_type} xmlns="http://www.w3.org/2000/svg" viewBox={icon.viewport}>
+            <path d={icon.path} strokeWidth={stroke_width} stroke={stroke_color} />
         </SVG>
-    )
+    </a >
+    } else return <SVG onClick={() => handleClickEvent()} className={icon_type} xmlns="http://www.w3.org/2000/svg" viewBox={icon.viewport}>
+        <path d={icon.path} strokeWidth={stroke_width} stroke={stroke_color} />
+    </SVG>
+
+
 }
 
 export default IconComponent

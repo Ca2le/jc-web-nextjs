@@ -46,7 +46,6 @@ function Footer() {
           <ContactInnerContainer>
             <Message>{state_langange.foot_h}</Message>
             <ContactBtnContainer >
-              
               <ContactBtn className={copyToggle.copied} type={'text'} value={'carl@jumpcode.org'} readOnly />
               <CopyContainer className={copyToggle.copiedContainer} copied={copyToggle.copied} onClick={(event) => HandleCopyEvent(event, setCopyToggle)} >
                 {copyToggle.copied === 'yes' ? <CL.CopyMessage /> : null}
@@ -55,10 +54,10 @@ function Footer() {
             </ContactBtnContainer>
             <SocialMediaContainer>
               <IconContainer>
-                <CL.Icon icon_type='facebook' />
+                <CL.Icon icon_type='linkedin' stroke_width='1px' stroke_color='black' href='https://www.linkedin.com/in/carl-sporrong-400a84157/'/>
               </IconContainer>
               <IconContainer>
-                <CL.Icon icon_type='linkedin' />
+                <CL.Icon icon_type='github'stroke_width='1px' stroke_color='black' href='https://github.com/Ca2le' />
               </IconContainer>
             </SocialMediaContainer>
           </ContactInnerContainer>

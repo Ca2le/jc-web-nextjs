@@ -6,7 +6,9 @@ interface IImgContainer {
     color: string;
 }
 
+
 export const CardContainer = styled.div`
+    border-radius: 5px;
     height: 27rem;
     width: 18rem;
     background-color: white;
@@ -15,7 +17,7 @@ export const CardContainer = styled.div`
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
-    box-shadow: 0.6rem 0.6rem  0.8rem  rgba(58, 58, 58, 0.09);
+    box-shadow: 5px 5px 10px  rgba(58, 58, 58, 0.05);
     @media screen and (max-width: 330px){
     width: 90vw;
 }
@@ -31,7 +33,19 @@ export const ImgContainer = styled.div<IImgContainer>`
     align-items: center;
     justify-content: center;
     margin-bottom: 0.8rem;
+    border: 1px solid black;
 `
+interface IIIC {
+    iheight: number;
+    iwidth: number;
+}
+export const InnerImageContainer = styled.div<IIIC>`
+    position: relative;
+    height: ${props => `${props.iheight}px`};
+    width: ${props => `${props.iwidth}px`};
+    bottom: 6%;
+`
+
 
 export const TextContainer = styled.div`
     width: 100%;

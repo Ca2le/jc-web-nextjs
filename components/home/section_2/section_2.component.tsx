@@ -2,7 +2,7 @@ import * as CL from '../../components.libary'
 import React, { useContext, useEffect, useRef } from 'react'
 import theme from '../../../global/styles/theme'
 import { LangageContext, WideCard } from '../../components.libary'
-import { CardContainer, HeaderContainer, S2Container, S2InnerContainer } from './section_2.styled'
+import { CardContainer, S2Container, S2InnerContainer } from './section_2.styled'
 
 function Section_2() {
   const { state_langange } = useContext(LangageContext)

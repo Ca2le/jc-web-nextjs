@@ -7,10 +7,12 @@ width: 100%;
 flex-direction: column;
 display: flex;
 gap: 1.2rem;
+justify-content: center;
+text-align: center;
 
 
 @media screen and (max-width: ${theme.screen.tablet}) {
-        width: 25rem;
+        width: 100%;
         text-align: center;
     }
 

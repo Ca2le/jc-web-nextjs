@@ -9,12 +9,14 @@ export const FootContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20rem;
+    height: 22rem;
     width: 100%;
     background-color: ${theme.hexcolors.mint};
-    @media screen and (max-width: 900px) {
-        height: 60vh;
-        padding-top: 3rem;
+    gap: 2rem;
+    padding-top: 2rem;
+    @media screen and (max-width: 900px)  {
+        height: 40vh;
+       
     }
 `
 export const UpperContainer = styled.div`
@@ -24,6 +26,7 @@ export const UpperContainer = styled.div`
     position: relative;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2rem;
     @media screen and (max-width: 900px) {
      
         flex-direction: column;
@@ -83,7 +86,7 @@ export const ContactBtn = styled.input`
     text-align: center;
     height: 100%;
     width: 20rem;
-    border: 1.5px solid ${theme.hexcolors.dark};
+    border: 1.7px solid ${theme.hexcolors.dark};
     border-right-style: none;
     font-family: ${theme.fonts_second};
     font-size: 20px;
@@ -100,13 +103,12 @@ export const ContactBtn = styled.input`
     
 `
 export const SocialMediaContainer = styled.div`
-    width: 20rem;
+    width: 8rem;
     display: flex;
-    gap: 10px;
+    gap: 3px;
     @media screen and (max-width: 900px) {
         align-items: center;
         justify-content: center;
-        width: 8rem;
     }
     
 `
@@ -133,15 +135,24 @@ export const LangageToggle = styled.div`
 `
 export const IconContainer = styled.div`
     position: relative;
-    height: 30px;
-    width: 30px;
-    background-color: ${theme.hexcolors.rasberry};
-    border: 1.5px solid ${theme.hexcolors.dark};
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .linkedin{
-        fill: #fff;
+        fill: ${theme.hexcolors.rasberry};
+        &:hover{
+            fill: ${theme.hexcolors.dark};
+            cursor: pointer;
+        }
     }
-    .facebook{
-        fill: #fff;
+    .github{
+        fill: ${theme.hexcolors.rasberry};
+        &:hover{
+            fill: ${theme.hexcolors.dark};
+            cursor: pointer;
+        }
     }
 
 `
@@ -152,7 +163,7 @@ export const CopyContainer = styled.div<ICC>`
     position: relative;
     height: 100%;
     width: 5rem;
-    border: 1.5px solid ${theme.hexcolors.dark};
+    border: 1.7px solid ${theme.hexcolors.dark};
     .copy{
         fill: #fff;
         width: 45%;
@@ -190,12 +201,17 @@ export const ContactBtnContainer = styled.div`
     }
     .yes{
         color: #fff;
-        border: none;
+        border: 1.7px black solid;
         background-color: ${theme.hexcolors.rasberry};
     }
   
     .yes_container{
-        border: none;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: none;
+        border-color: black;
+        border-width: 1.7px;
         background-color: #e67496;
     }
     .no_container{
