@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import React, { Suspense } from 'react'
+import React from 'react'
 import * as CL from '../components/components.libary'
 import HamburgerToggleComponent from '../components/context/hamburger_toggle_context'
 import IntersectionContextComponent from '../components/context/intersection_context'

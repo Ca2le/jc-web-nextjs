@@ -16,10 +16,10 @@ function BackgroundShape() {
     <ShapeContainer>
       <InnerShapeContainer>
         <BubbleGuyIMGContainer>
-          <Image layout="fill" src={BubbleGuyIMG} alt={'error'} quality={100} />
+          <Image layout="fill" src={BubbleGuyIMG} alt={'error'} quality={100} priority />
         </BubbleGuyIMGContainer>
         <BubbleList />
-        <SVG viewBox=' 0 0 367 269'>
+        <SVG height={0} viewBox=' 0 0 367 269'>
           <path stroke="black" strokeWidth="1.5" d="M268.5,8.5h74.69c12.6,0,22.83,10.23,22.83,22.83v237.17H8.5C8.5,125,125,8.5,268.5,8.5Z" />
         </SVG>
       </InnerShapeContainer>
