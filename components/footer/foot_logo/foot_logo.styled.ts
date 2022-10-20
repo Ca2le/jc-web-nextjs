@@ -14,6 +14,6 @@ export const LogoContainer = styled.div`
 `
 
 export const SVG = styled.svg`
-    width: 9rem;
+    
     fill: ${theme.hexcolors.dark};
 `

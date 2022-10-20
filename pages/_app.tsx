@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import React from 'react'
+import React, { Suspense } from 'react'
 import * as CL from '../components/components.libary'
 import HamburgerToggleComponent from '../components/context/hamburger_toggle_context'
 import IntersectionContextComponent from '../components/context/intersection_context'
@@ -11,20 +11,20 @@ import { globalStyle as GlobalStyle } from '../global/styles/styles'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
-      <GlobalStyle />
-      <ScreenSizeContextComponent>
-        <ScrollContextComponent>
-          <IntersectionContextComponent>
-            <LangageContextComponent>
-              <HamburgerToggleComponent>
-                <CL.Navbar />
-                <Component {...pageProps} />
-                <CL.Footer />
-              </HamburgerToggleComponent>
-            </LangageContextComponent>
-          </IntersectionContextComponent>
-        </ScrollContextComponent>
-      </ScreenSizeContextComponent>
+        <GlobalStyle />
+        <ScreenSizeContextComponent>
+          <ScrollContextComponent>
+            <IntersectionContextComponent>
+              <LangageContextComponent>
+                <HamburgerToggleComponent>
+                  <CL.Navbar />
+                  <Component {...pageProps} />
+                  <CL.Footer />
+                </HamburgerToggleComponent>
+              </LangageContextComponent>
+            </IntersectionContextComponent>
+          </ScrollContextComponent>
+        </ScreenSizeContextComponent>
     </React.Fragment>
   )
 }

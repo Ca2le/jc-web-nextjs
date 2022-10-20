@@ -3,10 +3,11 @@ import { Container, InnerDivImage, InnerDivHeader } from './section_1.styled'
 import * as CL from '../../components.libary'
 
 
+
 function Section_1() {
   const scrollContext = useContext(CL.ScrollContext)
   const heroRef = useRef(null);
-
+  
   useEffect( () => {
     scrollContext.setState( (prevState: any) => {
     return {...prevState, heroSection: heroRef}
@@ -15,7 +16,7 @@ function Section_1() {
   return (
     <Container ref={heroRef}>
       <InnerDivImage>
-        <CL.HeroImage />
+        <CL.HeroImage/>
       </InnerDivImage>
       <InnerDivHeader>
         <CL.Header />

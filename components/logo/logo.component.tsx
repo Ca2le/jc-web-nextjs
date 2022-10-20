@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { Suspense, useContext } from 'react'
 import { ScrollTo } from '../../scripts/scroll_features';
 import { SVG, SVGContainer } from './logo.styled'
 import * as CL from '../components.libary'
@@ -13,8 +13,8 @@ function handleLogoClick(reference: any, setState: React.Dispatch<React.SetState
   setState(false)
 }
 
-
 function Logo(props: SVGProps) {
+
   const screen = useContext(CL.ScreenSizeContext)
   const {device, navbarStatus} = screen
   const { state, setState } = useContext(CL.HamburgerToggleContext)

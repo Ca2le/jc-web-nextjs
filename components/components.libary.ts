@@ -79,7 +79,9 @@ import LogoComponent from "./logo/logo.component";
 import InputScrollComponent from "./input_scroll/input_scroll.component";
 
 export const InputScroll = InputScrollComponent
-
+export const Logo= LogoComponent
+export const Button = ButtonComponent
+export const Link = LinkComponent
 
 // Foot Components 🏈
 import FootLogoComponent from "./footer/foot_logo/foot_logo.component";
@@ -89,9 +91,7 @@ export const CopyMessage = CopyMessageComponent
 export const FootLogo = FootLogoComponent
 export const Icon = IconComponent
 
-export const Button = ButtonComponent
-export const Link = LinkComponent
-export const Logo= LogoComponent
+
 
 
 // Other
