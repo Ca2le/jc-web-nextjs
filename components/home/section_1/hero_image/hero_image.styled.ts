@@ -5,6 +5,9 @@ export const HeroImageContainer = styled.div`
     position: relative;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     @media screen and (min-width: ${theme.screen.desktop}) and (orientation: landscape){
         

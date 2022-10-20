@@ -22,13 +22,14 @@ const rotate = keyframes`
 `;
 
 const bubbleAnimation = (device: string, endOfY:number, endOfX:number, size:number) => keyframes`
-0%  {opacity: 1; height: 0; width: 0; top: ${device === 'desktop' ? '0' : '19%'}; right: 32%;}
+0%  {opacity: 1; height: 0; width: 0; top: ${device === 'desktop' ? '0' : '19%'}; right: ${device === 'phone' ? '24%' : '34%'};}
 20%  {opacity: 1; height: ${`${size}px`}; width: ${`${size}px`}; }
 
 100%{opacity: 1; top: ${`${endOfY}%`}; right: ${`${endOfX}%`};}
 `
 
 export const BubbleContainer = styled.div<IBubbleContainer>`
+      
         opacity: ${ props => !props.animationDone ? 0 : 1 };
         z-index: 4;
         height: ${props => `${props.size}px`};

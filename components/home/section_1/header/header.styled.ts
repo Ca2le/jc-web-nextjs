@@ -29,13 +29,14 @@ export const InnerTextDiv = styled.div`
     position: absolute;
     width: 30rem;
     bottom: 18%;
-    
-
     }
 @media screen and (max-width: ${theme.screen.laptop}) {
     height: auto;
     width: 23rem;
     bottom: 10%;
+}
+@media screen and (max-width: ${theme.screen.tablet})  {
+    width: 50%;
 }
 @media screen and (max-width: ${theme.screen.phone})  {
     width: 17rem;
@@ -56,8 +57,6 @@ line-height: 1.15;
     &::first-letter{
     font-size: 4rem;
 }
-    
-
     }
 @media screen and (max-width: ${theme.screen.laptop}) {
     font-size: 3rem;
@@ -65,7 +64,12 @@ line-height: 1.15;
     font-size: 3.2rem;
     }
 }
-
+@media screen and (max-width: ${theme.screen.tablet} ) and (max-height: 500px) {
+    font-size: 2.1rem;
+    &::first-letter{
+    font-size: 2.3rem;
+    }
+}
 @media screen and (max-width: ${theme.screen.phone})  {
     font-size: 2.4rem;
     &::first-letter{
@@ -86,8 +90,10 @@ line-height: 1.15;
 @media screen and (max-width: ${theme.screen.laptop}) {
     font-size: 3rem;
     }
-
+    @media screen and (max-width: ${theme.screen.tablet} ) and (max-height: 500px) {
+    font-size: 2.3rem;
+}
 @media screen and (max-width: ${theme.screen.phone})  {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     }
 `

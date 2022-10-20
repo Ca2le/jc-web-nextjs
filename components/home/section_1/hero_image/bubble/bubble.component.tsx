@@ -21,7 +21,7 @@ function BubbleComponent({ delay, size, endOfY, endOfX }: IBubbleContainer) {
         }, delay*1000)
        
     },[])
-
+    console.log(device)
     return (
         <BubbleContainer animationDone={animationDone} device={device} size={size} delay={`${delay}s`} endOfX={endOfX} endOfY={endOfY}>
             <InnerBubbleContainer>

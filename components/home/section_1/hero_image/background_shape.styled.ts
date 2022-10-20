@@ -15,8 +15,12 @@ export const ShapeContainer = styled.div`
       right: 4rem;
     }
     @media screen and (max-width: ${theme.screen.phone}){
-      width: 17rem;
+      width: 100%;
       bottom: 0;
+      right: 0;
+      height: 12rem;
+      width: 25rem;
+    
     }
   `
   export const InnerShapeContainer = styled.div`

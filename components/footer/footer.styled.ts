@@ -14,8 +14,11 @@ export const FootContainer = styled.div`
     background-color: ${theme.hexcolors.mint};
     gap: 2rem;
     padding-top: 2rem;
-    @media screen and (max-width: 900px)  {
+    @media screen and (max-width: 700px)  {
         height: 40vh;
+    }
+    @media screen and (max-width: ${theme.screen.phone})  {
+        height: 50vh;
        
     }
 `

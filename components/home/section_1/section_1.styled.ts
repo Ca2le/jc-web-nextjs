@@ -19,18 +19,22 @@ padding-bottom: 5rem;
 @media screen and (max-width: ${theme.screen.laptop}) and (orientation: landscape){
     height: 90vh;
 }
+@media screen and (max-width: ${theme.screen.tablet} ) and (max-height: 500px) {
+    height: 70vw;
+    width: 100%;
+
+}
 @media screen and (max-width: ${theme.screen.phone})  {
     gap: 5%;
     flex-direction: column;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     padding-bottom: 1rem;
     height: 80vh;
 }
 
 `
 export const InnerDivImage = styled.div`
+
 display: flex;
 justify-content: end;
 height: 80%;
@@ -44,7 +48,8 @@ width: 40%;
 }
 
 @media screen and (max-width: ${theme.screen.phone})  {
-    width: 100%;
+  
+    width: 80%;
     height: 50%;
 }
 
