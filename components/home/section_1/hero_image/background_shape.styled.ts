@@ -27,7 +27,7 @@ export const ShapeContainer = styled.div`
 
   `
   export const SVG = styled.svg`
-      fill:#ff719c;
+      fill:blue;
       position: absolute;
       bottom: 0;
       right: 0;
