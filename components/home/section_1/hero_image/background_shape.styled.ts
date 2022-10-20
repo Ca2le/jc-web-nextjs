@@ -28,7 +28,7 @@ export const ShapeContainer = styled.div`
   `
   export const SVG = styled.svg`
       height: 100%;
-      fill:blue;
+      fill:${theme.hexcolors.rasberry};
       position: absolute;
       bottom: 0;
       right: 0;
