@@ -17,7 +17,7 @@ export const ShapeContainer = styled.div`
     @media screen and (max-width: ${theme.screen.phone}){
       width: 100%;
       bottom: 0;
-      right: 0;
+      right: 5%;
       height: 12rem;
       width: 25rem;
     
