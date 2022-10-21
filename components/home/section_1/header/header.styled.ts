@@ -3,6 +3,7 @@ import theme from "../../../../global/styles/theme";
 
 export const TextContainer = styled.div`
     height: 100%;
+   
     width: 100%;
     max-width: 40rem;
     position: relative;
@@ -16,6 +17,7 @@ export const TextContainer = styled.div`
 export const InnerTextDiv = styled.div`
 
     height: 50%;
+    
     width: 25rem;
     display: flex;
     gap: 2%;
@@ -36,7 +38,7 @@ export const InnerTextDiv = styled.div`
     bottom: 10%;
 }
 @media screen and (max-width: ${theme.screen.tablet})  {
-    width: 50%;
+    width: 80%;
 }
 @media screen and (max-width: ${theme.screen.phone})  {
     width: 17rem;
@@ -94,6 +96,6 @@ line-height: 1.15;
     font-size: 2.3rem;
 }
 @media screen and (max-width: ${theme.screen.phone})  {
-    font-size: 2.1rem;
+    font-size: 2.4rem;
     }
 `

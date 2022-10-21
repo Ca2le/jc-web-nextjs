@@ -30,11 +30,11 @@ padding-bottom: 5rem;
     width: 100%;
     padding-bottom: 1rem;
     height: 80vh;
+    align-items: center;
 }
 
 `
 export const InnerDivImage = styled.div`
-
 display: flex;
 justify-content: end;
 height: 80%;
@@ -48,7 +48,7 @@ width: 40%;
 }
 
 @media screen and (max-width: ${theme.screen.phone})  {
-  
+   
     width: 80%;
     height: 50%;
 }

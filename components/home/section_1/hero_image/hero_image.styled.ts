@@ -9,6 +9,7 @@ export const HeroImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     
+    
     @media screen and (min-width: ${theme.screen.desktop}) and (orientation: landscape){
         
     }
