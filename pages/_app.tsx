@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import React from 'react'
+import React, { useEffect } from 'react'
 import * as CL from '../components/components.libary'
 import HamburgerToggleComponent from '../components/context/hamburger_toggle_context'
 import IntersectionContextComponent from '../components/context/intersection_context'
@@ -9,7 +9,13 @@ import ScrollContextComponent from '../components/context/scrollContext.componen
 import { globalStyle as GlobalStyle } from '../global/styles/styles'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+            const loader = document.getElementById('globalLoader');
+        if (loader)
+            loader.style.display = 'none';
+    }
+  }, []);
   return (
     <React.Fragment>
         <GlobalStyle />
