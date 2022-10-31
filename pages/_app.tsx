@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
   return (
+    <div style={{backgroundColor: 'blue'}}>
     <React.Fragment>
         <GlobalStyle />
         <ScreenSizeContextComponent>
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </ScrollContextComponent>
         </ScreenSizeContextComponent>
     </React.Fragment>
+    </div>
   )
 }
 
