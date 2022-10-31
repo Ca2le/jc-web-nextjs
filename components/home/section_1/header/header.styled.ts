@@ -17,7 +17,6 @@ export const TextContainer = styled.div`
 export const InnerTextDiv = styled.div`
 
     height: 50%;
-    
     width: 25rem;
     display: flex;
     gap: 2%;

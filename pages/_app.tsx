@@ -9,6 +9,7 @@ import ScrollContextComponent from '../components/context/scrollContext.componen
 import { globalStyle as GlobalStyle } from '../global/styles/styles'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  
   return (
     <React.Fragment>
         <GlobalStyle />
